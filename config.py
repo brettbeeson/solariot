@@ -9,7 +9,7 @@ model = "sungrow-sh5k"
 timeout = 3
 scan_interval = 10
 # Optional:
-dweepy_uuid = "random-uuid"
+#dweepy_uuid = "random-uuid"
 # Optional:
 influxdb_ip = ""
 influxdb_port = 8086
