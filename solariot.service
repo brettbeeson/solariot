@@ -1,0 +1,17 @@
+[Unit]
+Description=SolarIOT Inverter Reporting
+Requires=systemd-networkd-wait-online.service
+After=systemd-networkd-wait-online.service
+# Try to restart forever!
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=60       # Wait a bit before restart
+
+[Service]
+ExecStart=/home/bbeeson/solariot/solariot.py
+
+[Install]
+WantedBy=multi-user.target
