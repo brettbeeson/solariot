@@ -11,11 +11,11 @@ scan_interval = 10
 # Optional:
 dweepy_uuid = "random-uuid"
 # Optional:
-influxdb_ip = "live2.phisaver.com"
+influxdb_ip = ""
 influxdb_port = 8086
-influxdb_user = "writer"
-influxdb_password = "W88magine!"
-influxdb_database = "phisaver"
+influxdb_user = ""
+influxdb_password = ""
+influxdb_database = ""
 influxdb_ssl = False # True
 influxdb_verify_ssl = False
 # Optional
