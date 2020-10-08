@@ -236,14 +236,16 @@ while True:
       t = Thread(target=publish_mqtt, args=(inverter,))
       t.start()
 
-    t = Thread(target=publish_dweepy, args=(inverter,))
-    t.start()
+    # nbo dweeps
+    # bbeeson
+    #t = Thread(target=publish_dweepy, args=(inverter,))
+    #t.start()
     if flux_client is not None:
       metrics = {}
       tags = {}
       fields = {}
       metrics['measurement'] = "Sungrow"
-      tags['location'] = "Gabba"
+      tags['device'] = config.device
       metrics['tags'] = tags
       metrics['fields'] = inverter
       t = Thread(target=publish_influx, args=(metrics,))
